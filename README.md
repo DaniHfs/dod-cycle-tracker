@@ -59,22 +59,16 @@ The generated `config.json` also includes sound settings. You can open it direct
 If you prefer to run it manually via Python or want to inspect the source code, make sure you have Python 3.10+ installed and grab the keyboard listener dependency:
 
 ```bash
-pip install keyboard
+python -m pip install keyboard pyinstaller
 ```
 
-To compile this script back down into a standalone, one-click portable executable, install PyInstaller:
+To compile this script back down into a standalone, one-click portable executable, use Python to call the PyInstaller compiler module directly. This prevents Windows "command not recognized" errors:
 
 ```bash
-pip install pyinstaller
+python -m PyInstaller --onefile --noconsole --uac-admin --hidden-import=keyboard tracker.py
 ```
 
-Then compile it using this specific optimization command:
-
-```bash
-pyinstaller --onefile --noconsole --uac-admin tracker.py
-```
-
-*Note: The `--uac-admin` flag is necessary so Windows permits the script to listen for your hotkeys while you are actively clicking around inside the heavy game client.*
+*Note: If your command line doesn't recognize `python`, replace `python` with `py` in the commands above. The `--uac-admin` flag is required so Windows allows the background script to detect your hotkeys while you are actively clicking inside the full-screen game.*
 
 ---
 
