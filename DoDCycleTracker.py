@@ -146,10 +146,17 @@ class DayOfDragonsTimer:
                 pressed_key = event.name.upper()
                 
                 if pressed_key == self.hotkeys["despawn"]["key"]:
-                    self.despawn_end_time = time.time() + 1200 # Set 20 min timer
-                    self.despawn_beep_triggered = False
-                    self.root.after(0, lambda: self.despawn_title.config(text="⚠️ CRYSTAL DESPAWNING", fg="#ff3333"))
-                    
+                    # If the timer is already ticking down, hitting the hotkey again turns it off
+                    if self.despawn_end_time > time.time():
+                        self.despawn_end_time = 0
+                        self.root.after(0, lambda: self.despawn_title.config(text="CRYSTAL ACTIVE", fg="#555555"))
+                        self.root.after(0, lambda: self.despawn_time.config(text="NO ACTIVE SPAWN", fg="#555555"))
+                    else:
+                        # Otherwise, start a fresh 20-minute countdown
+                        self.despawn_end_time = time.time() + 1200
+                        self.despawn_beep_triggered = False
+                        self.root.after(0, lambda: self.despawn_title.config(text="⚠️ CRYSTAL DESPAWNING", fg="#ff3333"))
+
                 elif pressed_key == self.hotkeys["day"]["key"]:
                     self.start_time = time.time()
                     
