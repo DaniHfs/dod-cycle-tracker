@@ -62,13 +62,13 @@ If you prefer to run it manually via Python or want to inspect the source code, 
 python -m pip install keyboard pyinstaller
 ```
 
-To compile this script back down into a standalone, one-click portable executable, use Python to call the PyInstaller compiler module directly. This prevents Windows "command not recognized" errors:
+To compile this script back down into a standalone, one-click portable executable, use:
 
 ```bash
 python -m PyInstaller --onefile --noconsole --uac-admin --hidden-import=keyboard tracker.py
 ```
 
-*Note: If your command line doesn't recognize `python`, replace `python` with `py` in the commands above. The `--uac-admin` flag is required so Windows allows the background script to detect your hotkeys while you are actively clicking inside the full-screen game.*
+*Note: If your command line doesn't recognize `python`, replace `python` with `py` in the commands above. The `--uac-admin` flag is required so Windows allows the background script to detect your hotkeys while you are actively clicking inside the game.*
 
 ---
 
