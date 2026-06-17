@@ -1,4 +1,5 @@
 # Day of Dragons - Crystal & Cycle Tracker Overlay
+### >>PLEASE READ THE NOTE ON ANTIVIRUS FLAGS AT THE BOTTOM!<<
 
 A super lightweight, performance-friendly screen overlay for *Day of Dragons* to help make eldering much easier. It accurately tracks the game's internal 4-hour day/night loop, warns you when server-side crystal spawn ticks are wrapping up, and features a manual decay timer you can trigger from full-screen.
 
@@ -65,13 +66,24 @@ python -m pip install keyboard pyinstaller
 To compile this script back down into a standalone, one-click portable executable, use:
 
 ```bash
-python -m PyInstaller --onefile --noconsole --uac-admin --hidden-import=keyboard tracker.py
+python -m PyInstaller --onefile --noconsole --uac-admin --hidden-import=keyboard DoDCycleTracker.py
 ```
 
-*Note: If your command line doesn't recognize `python`, replace `python` with `py` in the commands above. The `--uac-admin` flag is required so Windows allows the background script to detect your hotkeys while you are actively clicking inside the game.*
+*Note: If your command line doesn't recognize `python`, replace `python` with `py` in the commands above. The `--uac-admin` flag is required so Windows allows the background script to detect your hotkeys while you are active in the game.*
 
 ---
 
+## Important Note on Antivirus Flags (False Positives)
+
+If you run the compiled executable through a site like VirusTotal, you will see some security scanners flag it as suspicious. **This is a well-known, harmless "False Positive" common to Python scripts packaged via PyInstaller.** 
+
+Because this tool runs completely borderless and requires Windows Administrator privileges (which is mandatory so it can listen for your global F6/F7/F8 hotkeys while you are actively playing *Day of Dragons*), automated machine-learning scanners assume it is malicious out of the box. 
+
+**Your Account & PC are Safe:** 
+* The entire source code is completely open-source right here on GitHub for anyone to audit or inspect. 
+* If you or your community are ever uncomfortable running the compiled `.exe` file, you can easily install Python on your machine and run the raw, clean `DoDCycleTracker.py` script manually!
+
+---
 ## License
 
 This tool is open-source and released under the **MIT License**. Feel free to fork the repository, make UI tweaks, or add features for your own server community!
