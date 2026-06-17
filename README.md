@@ -30,6 +30,7 @@ This overlay is 100% clean and safe to use. It **does not** read the game's priv
 3. Set your *Day of Dragons* video settings to **Borderless Windowed** mode. (Exclusive Fullscreen blocks desktop overlays from sitting on top of the game screen).
 4. **Syncing the Clock:** The moment you log into your server and see the cycle shift (e.g., Night turns to Dawn, or Day turns to Dusk), tap your assigned sync hotkey to line up the timer perfectly with the server's time loop.
 5. **Tracking Spawns:** When a teammate calls out an active crystal spawn in chat, hit your **Active Timer** hotkey to instantly kick off a 20-minute visual despawn ring. Hit the **Active Timer** hotkey again to reset the timer. (Like a toggle switch)
+6. Right-clicking anywhere on the active overlay will instantly close the program.
 
 ### ⌨️ Default Keybinds
 

@@ -44,7 +44,11 @@ class DayOfDragonsTimer:
         
         self.is_changing_key = False
         self.despawn_end_time = 0  
-        self.current_phase_cache = None 
+        self.current_phase_cache = None
+
+        # Right-click anywhere on overlay to exit instantly
+        self.root.bind("<Button-3>", lambda e: self.root.destroy()) 
+ 
         
         # Day and night cycle timers (in seconds)
         self.DAY_DURATION = 8400   # 2 Hours 20 Minutes
