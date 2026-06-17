@@ -26,7 +26,7 @@ This overlay is 100% clean and safe to use. It **does not** read the game's priv
 ## How to Use It (For Players)
 
 1. Download the latest **`DoDCycleTracker.exe`** from the [Releases Section](./releases).
-2. Double-click the file to launch it. Click and drag anywhere on the dark overlay background to move it onto a clean spot on your screen or a second monitor.
+2. Double-click the file to launch it. Please note that a `config.json` file will be generated in the same folder. Click and drag anywhere on the dark overlay background to move it onto a clean spot on your screen or a second monitor.
 3. Set your *Day of Dragons* video settings to **Borderless Windowed** mode. (Exclusive Fullscreen blocks desktop overlays from sitting on top of the game screen).
 4. **Syncing the Clock:** The moment you log into your server and see the cycle shift (e.g., Night turns to Dawn, or Day turns to Dusk), tap your assigned sync hotkey to line up the timer perfectly with the server's time loop.
 5. **Tracking Spawns:** When a teammate calls out an active crystal spawn in chat, hit your **Active Timer** hotkey to instantly kick off a 20-minute visual despawn ring.
@@ -43,7 +43,7 @@ This overlay is 100% clean and safe to use. It **does not** read the game's priv
 
 * Click the **"Change"** button next to any action on the overlay.
 * The button will turn dark red and read **"Press..."**
-* Hit any key on your keyboard. The overlay will register it instantly, bind it globally, and save it to a local `config.json` file.
+* Hit any key on your keyboard. The overlay will register it instantly, bind it globally, and save it to the `config.json` file.
 
 ---
 
