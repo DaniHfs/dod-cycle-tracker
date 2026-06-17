@@ -33,7 +33,7 @@ This overlay is 100% clean and safe to use. It **does not** read the game's priv
 5. **Tracking Spawns:** When a teammate calls out an active crystal spawn in chat, hit your **Active Timer** hotkey to instantly kick off a 20-minute timer. Hit the **Active Timer** hotkey again to reset the timer. (Like a toggle switch)
 6. Right-clicking anywhere on the active overlay will instantly close the program.
 
-### ⌨️ Default Keybinds
+### Default Keybinds
 
 * **F6:** Sync Day Start
 * **F7:** Sync Night Start
